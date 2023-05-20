@@ -4,20 +4,21 @@
     It demonstrates a basic web application example that implements CRUD (Create, Read, Update, Delete) 
     operations using MongoDB as the database.
 
-   Prerequisites
+   PREREQUISTIES
+   
       Before running the code, make sure you have the following installed:
 
       MongoDB: A NoSQL database system
       A web server or framework capable of handling HTTP requests (e.g., Express.js for Node.js)
    
 
-   Dependencies
+   DEPENDENCIES
           
           Node.js
           express.js
           mongodb
           
-  How to run
+  HOW TO RUN
   
            npm install
   Set up a connection to your MongoDB database. This can be done by configuring the connection details in a separate file or
@@ -32,41 +33,41 @@ Ensure the server starts without any errors.
 Access the application in your web browser by navigating to the appropriate URL (e.g., http://localhost:1234).
 
 
-Explanation for HTML code
+EXPLANATION FOR HTML CODE
 
      The  code is written in HTML,css.
 
 
-HTML Structure
+HTML STRUCTURE
 
          The code begins with the standard HTML structure. 
 
          The <body> section contains the main content of the page.
 
-Page Title and Heading
+PAGE TITLE AND HEADING
 
          The <h1>element displays the title of the page,that is,"COLLEGE MANAGEMENT SYSTEM". 
   
   
-Create Operation
+CREATE OPERATION
   
          The code checks if the edit_id variable is present or not,if present the page displays an edit form. Otherwise,
          it displays a create form.
   
 
-Edit Form
+EDIT FORM
   
           If the edit_id variable is present, the code displays an edit form. 
 
   
-  Input fields
+  INPUT FIELDS
   
          name
          register number
          class
   
 
-Student List
+STUDENT LIST
   
           The code uses a loop ({{#each StudDet}}) to iterate over a list of students.
 
@@ -75,14 +76,14 @@ Student List
           to identify which student to edit. The "Delete" link includes the studDet_id as a query parameter (delete_id={{this._id}}).
           It also includes an onclick event to show a confirmation dialog before deleting the student detail.
 
-Syntax
+SYNTAX
   
     The code uses a templating language (not specified in the code snippet) to insert dynamic values into the HTML. 
     The placeholders ({{message}}, {{#if edit_id}}, {{edit_id}}, {{edit_StudDet.name}}, {{editStudDet.rollno}},
     {{editStudDet.cls}} {{#each StdDet}}, {{this.name}}, {{this.rollno}}`,{{this.cls}}) are replaced with actual 
     values when the page is rendered.
 
-Conclusion
+CONCLUSION
   
   This code  demonstrates a basic web application that allows users to perform CRUD operations (Create, Read, Update, Delete) on a 
   collection of student details stored in a MongoDB database. It provides forms for creating new student details and editing 
