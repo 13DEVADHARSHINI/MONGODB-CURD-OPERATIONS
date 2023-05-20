@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+            background-image: url('https://www.campusoption.com/images/colleges/gallery/24_03_17_055251_College2.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;    
+            text-align: center;
+            color:rgb(17, 255, 120) }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mongodb CRUD operations for college management system</title>
+</head>
+<body>
+    
+    <h1 style="color:rgb(79, 0, 249)">COLLEGE MANAGEMENT SYSTEM</h1>
+    {{message}}
+    <br>
+    {{#if edit_id}}
+     <h3>Edit</h3>
+    <form method="post" action="/update_StudDet/{{edit_id}}">
+        <label for="">STUDENT NAME:</label>
+        <input type="text" name="Std_name" value="{{edit_StudDet.Std_name}}">
+        <br><br>
+        <label for="">REGISTER NUMBER:</label>
+        <input type="text" name="reg_no" value="{{edit_StudDet.reg_no}}">
+        <br><br>
+        <label for="">CLASS:</label>
+        <input type="text" name="cls" value="{{edit_StudDet.cls}}">
+        <br><br>
+        <input type="submit" >
+    </form><br><br>
+    {{else}}
+
+    <h3>Create</h3>
+    <form method="post" action="/store_StudDet">
+        <label for="">STUDENT NAME:</label>
+        <input type="text" name="std_name">
+        <br><br>
+        <label for="">REGISTER NUMBER</label>
+        <input type="text" name="reg_no">
+        <br><br>
+        <label for="">CLASS</label>
+        <input type="text" name="cls">
+        <br><br>
+        <input type="submit" >
+    </form><br><br>
+
+   {{/if}}
+
+    <ul>
+        {{#each StudDet}}
+        <li> {{this.std_name}} - {{this.reg_no}} - {{this.cls}} <a href="/?edit_id={{this._id}}">Edit</a>  <a href="/?delete_id={{this._id}}" onclick="return confirm('Are you sure want to delete?')" >Delete</a></li>
+        {{/each}}
+    </ul>
+
+</body>
+</html>
