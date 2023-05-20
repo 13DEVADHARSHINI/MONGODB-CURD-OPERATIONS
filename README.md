@@ -1,8 +1,8 @@
 # MONGODB-CURD-OPERATIONS
    DESCRIPTION
    
-    It demonstrates a basic web application example that implements CRUD (Create, Read, Update, Delete) operations using MongoDB as
-    the database.
+    It demonstrates a basic web application example that implements CRUD (Create, Read, Update, Delete) 
+    operations using MongoDB as the database.
 
    Prerequisites
       Before running the code, make sure you have the following installed:
@@ -20,7 +20,8 @@
   How to run
   
            npm install
-  Set up a connection to your MongoDB database. This can be done by configuring the connection details in a separate file or directly in the code. Ensure you have the necessary credentials (e.g., host, port, username, password) to connect to your MongoDB instance.
+  Set up a connection to your MongoDB database. This can be done by configuring the connection details in a separate file or
+  directly in the code. Ensure you have the necessary credentials (e.g., host, port, username, password) to connect to your MongoDB instance.
 
 Modify the code as needed to match your database connection settings. Look for sections of code that handle the MongoDB connection and update them accordingly.
 
